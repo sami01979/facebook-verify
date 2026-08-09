@@ -12,9 +12,21 @@ export default function Login() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const isValidInput = (value) => {
+    const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    const isPhone = /^01\d{9}$/.test(value); // starts with 01, total 11 digits
+    return isEmail || isPhone;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+
+    if (!isValidInput(formData.email)) {
+      setError("Enter a valid email or an 11-digit number starting with 01");
+      return;
+    }
+
     setLoading(true);
 
     try {
@@ -40,7 +52,7 @@ export default function Login() {
         <div className="bg-white rounded-lg shadow-md p-6">
           <form onSubmit={handleSubmit} className="flex flex-col gap-3">
             <input
-              type="email"
+              type="text"
               name="email"
               placeholder="Mobile number or email"
               value={formData.email}
