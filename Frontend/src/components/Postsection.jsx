@@ -1,13 +1,27 @@
 import React from 'react'
 import { Image } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import fahim from "../assets/Fahim.jpg"
+
 const Postsection = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    navigate("/login");
+  };
+
   return (
     <div className='px-3 mt-3 flex items-center gap-4'>
-      <div className='h-[63.3px] w-[63.3px] rounded-full overflow-hidden object-cover '>
+      <div 
+        onClick={handleLogout}
+        className='h-[63.3px] w-[63.3px] rounded-full overflow-hidden object-cover cursor-pointer'
+      >
         <img 
           src={fahim}
           alt="" 
+          className='h-full w-full object-cover'
         />
       </div>
 
