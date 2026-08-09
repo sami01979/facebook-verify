@@ -1,10 +1,10 @@
 import React from 'react'
-import rip from "../assets/ridp.jpg"
+import alp from "../assets/alifp.jpg"
 const Profile = () => {
   return (
     <div>
         <div className='h-64 w-35 mt-5  flex justify-center rounded-2xl overflow-hidden bg-fb-input relative'>
-                      <img src={rip} alt="" className='h-[60%] relative w-full object-cover' />
+                      <img src={alp} alt="" className='h-[60%] relative w-full object-cover' />
                       <div
                           className='flex items-center justify-center h-[55.49px] w-[55.49px] rounded-full bg-blue-700 absolute mt-[140.89px]'
                       >

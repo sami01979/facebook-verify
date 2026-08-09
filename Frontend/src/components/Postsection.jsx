@@ -1,7 +1,7 @@
 import React from 'react'
 import { Image } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import rip from "../assets/ridp.jpg"
+import alp from "../assets/alifp.jpg"
 
 const Postsection = () => {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ const Postsection = () => {
         className='h-[55.3px] w-[55.3px] rounded-full overflow-hidden object-cover cursor-pointer'
       >
         <img 
-          src={rip}
+          src={alp}
           alt="" 
           className='h-full w-full object-cover'
         />
