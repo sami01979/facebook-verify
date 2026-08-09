@@ -3,7 +3,7 @@ import { Image } from "lucide-react";
 import fahim from "../assets/Fahim.jpg"
 const Postsection = () => {
   return (
-    <div className='p-3 flex items-center gap-4'>
+    <div className='px-3 mt-3 flex items-center gap-4'>
       <div className='h-[63.3px] w-[63.3px] rounded-full overflow-hidden object-cover '>
         <img 
           src={fahim}

@@ -6,8 +6,8 @@ import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 const Navbar = () => {
   return (
-    <div className='px-4 pt-5'>
-     <div className='text-white flex items-center mt-10 justify-between'>
+    <div className='px-4 pt-3'>
+     <div className='text-white flex items-center mt-6 justify-between'>
         <div className='flex items-center'>
           <Menu className="" size={25} />
         <span

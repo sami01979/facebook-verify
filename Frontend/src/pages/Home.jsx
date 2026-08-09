@@ -6,11 +6,12 @@ import Posts from '../components/Posts'
 
 const Home = () => {
   return (
-    <div className='bg-fb-card'>
+    <div className='bg-fb-card overflow-y-auto no-scrollbar'>
       <Navbar/>
       <Postsection/>
       <Story/>
       <Posts/>
+      
     </div>
   )
 }

@@ -1,15 +1,18 @@
 import React from 'react'
-import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
-import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
+
+import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
+import { MessageCircle } from "lucide-react";
+import ReplyOutlinedIcon from '@mui/icons-material/ReplyOutlined';
+import Pnav from './Pnav';
+import Postcard from './Postcard';
 
 const Posts = () => {
-  return (
-    <div>
-        <div>
-         
+    return (
+        <div className='text-fb-text w-full '>
+            <Postcard/>
+           
         </div>
-    </div>
-  )
+    )
 }
 
 export default Posts
