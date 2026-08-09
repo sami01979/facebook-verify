@@ -1,10 +1,10 @@
 import React from 'react'
-import ridp from "../assets/ridp.jpg"
+import azp from "../assets/azizp.jpg"
 const Profile = () => {
   return (
     <div>
         <div className='h-64 w-35 mt-5  flex justify-center rounded-2xl overflow-hidden bg-fb-input relative'>
-                      <img src={ridp} alt="" className='h-[60%] relative w-full object-cover' />
+                      <img src={azp} alt="" className='h-[60%] relative w-full object-cover' />
                       <div
                           className='flex items-center justify-center h-[55.49px] w-[55.49px] rounded-full bg-blue-700 absolute mt-[140.89px]'
                       >
