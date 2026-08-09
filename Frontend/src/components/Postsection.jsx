@@ -1,7 +1,7 @@
 import React from 'react'
 import { Image } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import fahim from "../assets/Fahim.jpg"
+import ridp from "../assets/ridp.jpg"
 
 const Postsection = () => {
   const navigate = useNavigate();
@@ -16,10 +16,10 @@ const Postsection = () => {
     <div className='px-3 mt-3 flex items-center gap-4'>
       <div 
         onClick={handleLogout}
-        className='h-[63.3px] w-[63.3px] rounded-full overflow-hidden object-cover cursor-pointer'
+        className='h-[55.3px] w-[55.3px] rounded-full overflow-hidden object-cover cursor-pointer'
       >
         <img 
-          src={fahim}
+          src={ridp}
           alt="" 
           className='h-full w-full object-cover'
         />
