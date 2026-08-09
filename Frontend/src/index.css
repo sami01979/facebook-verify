@@ -1,1 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --font-roboto-slab: 'Roboto Slab', serif;
+  --font-rubik: 'Rubik', sans-serif;
+
+  --color-fb-bg: #18191A;
+  --color-fb-card: #242526;
+  --color-fb-input: #3A3B3C;
+  --color-fb-text: #E4E6EB;
+  --color-fb-text-muted: #B0B3B8;
+  --color-fb-blue: #1877F2;
+  --color-fb-border: #3E4042;
+}

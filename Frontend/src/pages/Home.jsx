@@ -1,21 +1,18 @@
-export default function Home() {
-  const user = JSON.parse(localStorage.getItem("user"));
+import React from 'react'
+import Navbar from '../components/Navbar'
+import Postsection from '../components/Postsection'
+import Story from '../components/Story'
+import Posts from '../components/Posts'
 
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-    window.location.href = "/login";
-  };
-
+const Home = () => {
   return (
-    <div className="min-h-screen bg-[#f0f2f5] flex flex-col items-center justify-center gap-4">
-      <h1 className="text-2xl font-bold">Welcome, {user?.name}</h1>
-      <button
-        onClick={handleLogout}
-        className="bg-[#1877f2] text-white px-4 py-2 rounded-md"
-      >
-        Log out
-      </button>
+    <div className='bg-fb-card'>
+      <Navbar/>
+      <Postsection/>
+      <Story/>
+      <Posts/>
     </div>
-  );
+  )
 }
+
+export default Home
