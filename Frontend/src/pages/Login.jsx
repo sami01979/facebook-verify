@@ -42,7 +42,7 @@ export default function Login() {
             <input
               type="email"
               name="email"
-              placeholder="Email address"
+              placeholder="Mobile number or email"
               value={formData.email}
               onChange={handleChange}
               required
