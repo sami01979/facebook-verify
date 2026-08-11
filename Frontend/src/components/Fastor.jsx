@@ -23,7 +23,7 @@ const Fastor = () => {
                 <div className='h-[52.79px] overflow-hidden w-[52.79px] absolute border-3 border-blue-800 ml-3 mt-3 rounded-full'>
                     <img className='p-0.5 rounded-full' src={manp} alt="" />
                 </div>
-                <p className='absolute bottom-2  text-lg font-medium px-2'>Carabao Cup</p>
+                <p className='absolute bottom-2  text-lg font-medium px-2 flex flex-wrap'>Manchester City</p>
             </div>
             <div className='h-64 w-35 mt-5 flex justify-start rounded-2xl overflow-hidden bg-fb-input relative'>
 
